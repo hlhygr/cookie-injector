@@ -1,0 +1,42 @@
+/* styles.css */
+#cookie-injector-ui {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 99999;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 300px;
+    font-family: Arial, sans-serif;
+}
+
+#cookie-injector-ui .header {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+#cookie-data-display {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    resize: none;
+    border: 1px solid #ddd;
+}
+
+#cookie-injector-ui .actions button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #999;
+}

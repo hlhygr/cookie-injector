@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Cookie Inspector & Injector",
+  "version": "1.0",
+  "description": "刷新页面时获取并管理当前页面的 Cookie。",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": { // 定义点击工具栏图标时的行为
+    "default_icon": {
+      "16": "icons/icon16.png"
+    },
+    "default_popup": "popup.html" // <-- 新增：指定弹出窗口文件
+  },
+  "permissions": [
+    "activeTab",
+    "cookies",
+    "scripting",
+    "storage",
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
