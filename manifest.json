@@ -8,11 +8,11 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "action": { // 定义点击工具栏图标时的行为
+  "action": {
     "default_icon": {
       "16": "icons/icon16.png"
     },
-    "default_popup": "popup.html" // <-- 新增：指定弹出窗口文件
+    "default_popup": "popup.html"
   },
   "permissions": [
     "activeTab",

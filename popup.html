@@ -3,32 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Cookie Injector</title>
-    <link rel="stylesheet" href="styles.css"> 
-    <style>
-        /* 为 Popup 调整样式，确保它适应小窗口 */
-        body { width: 350px; min-height: 250px; padding: 0; margin: 0; }
-        #cookie-injector-ui {
-             position: static; /* 不再需要 fixed */
-             box-shadow: none;  /* 移除阴影 */
-             border: none;
-             width: auto;
-        }
-        .header { padding: 5px 10px; background-color: #f4f4f4; border-bottom: 1px solid #ddd; }
-        .info { padding: 10px; }
-        .actions { padding: 10px; text-align: right; }
-        #cookie-data-display { margin-bottom: 0; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="popup-content">
         <div id="cookie-injector-ui">
-            <div class="header" id="ui-header">正在加载...</div>
-            <div class="info" id="ui-info"></div>
-            <textarea id="cookie-data-display" rows="5" style="width: 100%; box-sizing: border-box; padding: 5px;"></textarea>
-            <div class="actions">
-                <button id="copy-btn">复制上次 Cookie</button>
-                <button id="apply-btn">应用到当前页面</button>
+            <div class="header">
+                <div>
+                    <span class="eyebrow">Chrome Extension</span>
+                    <h1 id="ui-header">正在加载...</h1>
+                </div>
+                <span class="status-dot" aria-hidden="true"></span>
             </div>
+            <div class="info" id="ui-info"></div>
+            <label class="cookie-label" for="cookie-data-display">Cookie 数据</label>
+            <textarea id="cookie-data-display" rows="6" spellcheck="false"></textarea>
+            <div class="actions">
+                <button class="secondary-btn" id="copy-btn">复制</button>
+                <button class="primary-btn" id="apply-btn">应用到当前页面</button>
+            </div>
+            <div class="message" id="message" role="status" aria-live="polite"></div>
         </div>
     </div>
     <script src="popup.js"></script>
